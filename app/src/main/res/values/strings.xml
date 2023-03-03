@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">レンチン計算</string>
-    <string name="tvBefore">書いてある情報</string>
+    <string name="tvBefore">記載の情報</string>
     <string name="tvAfter">使う電子レンジ</string>
     <string name="watt">W</string>
     <string name="wattUnit">%1$dW</string>
@@ -8,4 +8,6 @@
     <string name="watt500">500W</string>
     <string name="watt600">600W</string>
     <string name="setPreset">プリセット%1$dを%2$dWに設定しました。</string>
+    <string name="minutes">分</string>
+    <string name="seconds">秒</string>
 </resources>

@@ -1,18 +1,15 @@
 package com.github.mutoxu_n.MicrowaveCalculator
 
-import android.annotation.SuppressLint
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.preference.PreferenceManager
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity() {
@@ -104,7 +101,7 @@ class MainActivity : AppCompatActivity() {
             // preset
             pressed?.let {
                 val pref = getPreferences(Context.MODE_PRIVATE)
-                val arr = listOf<Int>(
+                val arr = listOf(
                     pref.getInt("preset1", 500),
                     pref.getInt("preset2", 600),
                     pref.getInt("preset3", 700)
@@ -142,7 +139,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private inner class OnTimeChanged(): TextWatcher {
+    private inner class OnTimeChanged: TextWatcher {
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
@@ -178,8 +175,18 @@ class MainActivity : AppCompatActivity() {
 
     private inner class OnTimeSelect: View.OnClickListener {
         override fun onClick(v: View?) {
+            // get min and sec
+            var s = findViewById<EditText>(R.id.etBeforeTime).text.toString().replace(":", "").toIntOrNull()
+            if(s == null) s = 0
 
+            val sec = s % 100
+            val min = (s - sec) / 100
+            val dialog = TimePickDialogFragment(min, sec)
+            dialog.show(supportFragmentManager, "TimePickDialog")
         }
-
+    }
+    fun onReturnTimeValue(min: Int, sec: Int) {
+        val num = min*100 + sec
+        findViewById<EditText>(R.id.etBeforeTime).setText(num.toString())
     }
 }
