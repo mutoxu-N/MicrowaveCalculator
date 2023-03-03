@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/llBefore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="25dp"
+        android:background="@drawable/border"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvBefore"
+            android:textSize="25sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/ivBeforeMicrowaveIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_microwave"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/etBeforeWatt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/ivBeforeMicrowaveIcon"
+                app:layout_constraintEnd_toStartOf="@id/tvBeforeWattUnit"
+                app:layout_constraintTop_toTopOf="parent"
+                android:inputType="numberDecimal"
+                android:gravity="end"
+                android:textSize="20sp"
+                android:selectAllOnFocus="true" />
+
+            <TextView
+                android:id="@+id/tvBeforeWattUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/watt"
+                app:layout_constraintEnd_toStartOf="@id/bt500W"
+                app:layout_constraintBaseline_toBaselineOf="@+id/etBeforeWatt"
+                android:layout_marginEnd="5dp"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/bt500W"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@id/bt600W"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvBeforeWattUnit"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingHorizontal="3dp"
+                android:paddingVertical="0dp"
+                android:layout_margin="3dp"
+                android:text="@string/watt500"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/bt600W"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/bt500W"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingHorizontal="3dp"
+                android:paddingVertical="0dp"
+                android:layout_margin="3dp"
+                android:text="@string/watt600"
+                android:textSize="20sp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/ivBeforeTimeIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_time"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/etBeforeTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/ivBeforeTimeIcon"
+                app:layout_constraintEnd_toStartOf="@+id/btTimeSelect"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="8dp"
+                android:inputType="numberDecimal"
+                android:gravity="end"
+                android:textSize="20sp"
+                android:selectAllOnFocus="true" />
+
+            <Button
+                android:id="@+id/btTimeSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/etBeforeTime"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingVertical="0dp"
+                android:text="@string/select"
+                android:textSize="20sp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAfter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/llBefore"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="25dp"
+        android:background="@drawable/border"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvAfter"
+            android:textSize="25sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/ivAfterMicrowaveIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_microwave"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etAfterWatt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@id/tvAfterWattUnit"
+                app:layout_constraintStart_toEndOf="@+id/ivAfterMicrowaveIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="end"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvAfterWattUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/watt"
+                android:textSize="20sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/etAfterWatt"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/btPreset1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingVertical="0dp"
+                android:text="@string/watt500"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/btPreset2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivAfterMicrowaveIcon" />
+
+            <Button
+                android:id="@+id/btPreset2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingVertical="0dp"
+                android:text="@string/watt500"
+                android:textSize="20sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btPreset1"
+                app:layout_constraintEnd_toStartOf="@+id/btPreset3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btPreset1" />
+
+            <Button
+                android:id="@+id/btPreset3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingVertical="0dp"
+                android:text="@string/watt500"
+                android:textSize="20sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btPreset2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btPreset2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvResultDisplay"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llAfter"
+        android:layout_marginTop="30dp"
+
+        android:textSize="30sp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
