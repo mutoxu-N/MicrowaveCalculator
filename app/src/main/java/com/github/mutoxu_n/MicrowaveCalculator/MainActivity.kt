@@ -76,9 +76,8 @@ class MainActivity : AppCompatActivity() {
         val resultSeconds = (beforeWatt.toDouble() * seconds / afterWatt).roundToInt()
         val sec = resultSeconds%60
         val min = (resultSeconds - sec) / 60
-        val result = "${min}分${sec}秒"
 
-        findViewById<TextView>(R.id.tvResultDisplay).text = result
+        findViewById<TextView>(R.id.tvResultDisplay).text = getString(R.string.result, min, sec)
 
     }
 
@@ -184,9 +183,5 @@ class MainActivity : AppCompatActivity() {
             val dialog = TimePickDialogFragment(min, sec)
             dialog.show(supportFragmentManager, "TimePickDialog")
         }
-    }
-    fun onReturnTimeValue(min: Int, sec: Int) {
-        val num = min*100 + sec
-        findViewById<EditText>(R.id.etBeforeTime).setText(num.toString())
     }
 }

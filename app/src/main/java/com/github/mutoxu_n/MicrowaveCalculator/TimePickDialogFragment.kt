@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.NumberPicker
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
@@ -37,7 +38,8 @@ class TimePickDialogFragment(private var min: Int, private var sec: Int) : Botto
 
     override fun onDestroy() {
         val a = activity as MainActivity
-        a.onReturnTimeValue(npMin.value, npSec.value)
+        val num = npMin.value*100 + npSec.value
+        a.findViewById<EditText>(R.id.etBeforeTime).setText(num.toString())
         super.onDestroy()
     }
 }
