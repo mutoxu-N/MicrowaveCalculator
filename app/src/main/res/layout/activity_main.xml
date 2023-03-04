@@ -240,6 +240,7 @@
         app:layout_constraintTop_toBottomOf="@+id/llAfter"
         android:layout_marginTop="30dp"
 
+        android:textColor="?attr/colorPrimaryInverse"
         android:textSize="30sp" />
 
 
