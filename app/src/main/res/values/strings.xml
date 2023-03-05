@@ -5,7 +5,7 @@
     <string name="watt" translatable="false">W</string>
     <string name="app_name">Microwave Calculator</string>
     <string name="tvBefore">Recipe</string>
-    <string name="tvAfter">Microwave</string>
+    <string name="tvAfter">Microwave you use</string>
     <string name="select">Select</string>
     <string name="setPreset">Preset%1$d was set to %2$dW.</string>
     <string name="minutes">min</string>
