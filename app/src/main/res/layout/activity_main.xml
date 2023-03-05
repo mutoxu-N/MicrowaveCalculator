@@ -35,6 +35,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:src="@drawable/ic_microwave"
+                android:padding="5dp"
+                android:paddingTop="5dp"
+
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="@+id/etBeforeWatt"
                 app:layout_constraintStart_toStartOf="parent"
@@ -168,6 +171,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:src="@drawable/ic_microwave"
+                android:paddingHorizontal="5dp"
+                android:paddingTop="5dp"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="@+id/etAfterWatt"
