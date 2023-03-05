@@ -3,29 +3,35 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center"
-    android:layout_marginHorizontal="100dp">
+    android:gravity="center">
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_weight="0.5"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="5dp"
+        android:paddingBottom="30dp"
         android:orientation="vertical"
         android:gravity="center_horizontal" >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="30dp"
 
             android:text="@string/minutes"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <NumberPicker
             android:id="@+id/npMin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp" />
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="100dp"
+
+            android:scaleX="1.8"
+            android:scaleY="1.8" />
     </LinearLayout>
 
 
@@ -33,23 +39,30 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="80dp"
+        android:paddingBottom="30dp"
         android:gravity="center"
         android:orientation="vertical" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="30dp"
 
             android:text="@string/seconds"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <NumberPicker
             android:id="@+id/npSec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp" />
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="100dp"
+
+            android:scaleX="1.8"
+            android:scaleY="1.8" />
     </LinearLayout>
 
 </LinearLayout>

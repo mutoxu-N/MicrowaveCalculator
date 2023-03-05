@@ -12,7 +12,7 @@
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
         android:padding="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
         android:layout_marginHorizontal="25dp"
         android:background="@drawable/border"
         android:focusableInTouchMode="true">
@@ -21,7 +21,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tvBefore"
-            android:textSize="25sp"
+            android:textColor="?attr/colorPrimaryInverse"
+            android:textSize="35sp"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,11 +32,13 @@
 
             <ImageView
                 android:id="@+id/ivBeforeMicrowaveIcon"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
                 android:src="@drawable/ic_microwave"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintBottom_toBottomOf="@+id/etBeforeWatt"
+                app:layout_constraintStart_toStartOf="parent"
+                android:adjustViewBounds="true" />
 
             <EditText
                 android:id="@+id/etBeforeWatt"
@@ -46,8 +49,10 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:inputType="numberDecimal"
                 android:gravity="end"
-                android:textSize="20sp"
-                android:selectAllOnFocus="true" />
+                android:selectAllOnFocus="true"
+
+                android:textColor="?attr/colorPrimaryInverse"
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/tvBeforeWattUnit"
@@ -57,7 +62,7 @@
                 app:layout_constraintEnd_toStartOf="@id/bt500W"
                 app:layout_constraintBaseline_toBaselineOf="@+id/etBeforeWatt"
                 android:layout_marginEnd="5dp"
-                android:textSize="20sp" />
+                android:textSize="25sp" />
 
             <Button
                 android:id="@+id/bt500W"
@@ -71,7 +76,7 @@
                 android:paddingVertical="0dp"
                 android:layout_margin="3dp"
                 android:text="@string/watt500"
-                android:textSize="20sp"/>
+                android:textSize="25sp"/>
 
             <Button
                 android:id="@+id/bt600W"
@@ -85,7 +90,7 @@
                 android:paddingVertical="0dp"
                 android:layout_margin="3dp"
                 android:text="@string/watt600"
-                android:textSize="20sp"/>
+                android:textSize="25sp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -96,11 +101,13 @@
 
             <ImageView
                 android:id="@+id/ivBeforeTimeIcon"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
                 android:src="@drawable/ic_time"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintBottom_toBottomOf="@+id/etBeforeTime"
+                app:layout_constraintStart_toStartOf="parent"
+                android:adjustViewBounds="true" />
 
             <EditText
                 android:id="@+id/etBeforeTime"
@@ -112,8 +119,10 @@
                 android:layout_marginEnd="8dp"
                 android:inputType="numberDecimal"
                 android:gravity="end"
-                android:textSize="20sp"
-                android:selectAllOnFocus="true" />
+                android:selectAllOnFocus="true"
+
+                android:textColor="?attr/colorPrimaryInverse"
+                android:textSize="30sp"/>
 
             <Button
                 android:id="@+id/btTimeSelect"
@@ -125,7 +134,7 @@
                 android:minWidth="0dp"
                 android:paddingVertical="0dp"
                 android:text="@string/select"
-                android:textSize="20sp"/>
+                android:textSize="25sp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
@@ -145,7 +154,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tvAfter"
-            android:textSize="25sp"
+            android:textColor="?attr/colorPrimaryInverse"
+            android:textSize="35sp"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -155,11 +165,13 @@
 
             <ImageView
                 android:id="@+id/ivAfterMicrowaveIcon"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
                 android:src="@drawable/ic_microwave"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/etAfterWatt"
+                android:adjustViewBounds="true" />
 
             <EditText
                 android:id="@+id/etAfterWatt"
@@ -171,7 +183,9 @@
                 android:gravity="end"
                 android:inputType="numberDecimal"
                 android:selectAllOnFocus="true"
-                android:textSize="20sp" />
+
+                android:textColor="?attr/colorPrimaryInverse"
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/tvAfterWattUnit"
@@ -179,7 +193,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
                 android:text="@string/watt"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/etAfterWatt"
                 app:layout_constraintEnd_toEndOf="parent" />
 
@@ -191,7 +205,7 @@
                 android:minHeight="0dp"
                 android:paddingVertical="0dp"
                 android:text="@string/watt500"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 app:layout_constraintEnd_toStartOf="@+id/btPreset2"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -205,7 +219,7 @@
                 android:minHeight="0dp"
                 android:paddingVertical="0dp"
                 android:text="@string/watt500"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/btPreset1"
                 app:layout_constraintEnd_toStartOf="@+id/btPreset3"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -219,7 +233,7 @@
                 android:minHeight="0dp"
                 android:paddingVertical="0dp"
                 android:text="@string/watt500"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/btPreset2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -240,8 +254,9 @@
         app:layout_constraintTop_toBottomOf="@+id/llAfter"
         android:layout_marginTop="30dp"
 
+        android:text="@string/result"
         android:textColor="?attr/colorPrimaryInverse"
-        android:textSize="30sp" />
+        android:textSize="40sp" />
 
 
 

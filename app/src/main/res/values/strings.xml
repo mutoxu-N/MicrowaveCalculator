@@ -8,7 +8,7 @@
     <string name="tvAfter">Microwave</string>
     <string name="select">Select</string>
     <string name="setPreset">Preset%1$d was set to %2$dW.</string>
-    <string name="minutes">minutes</string>
-    <string name="seconds">seconds</string>
+    <string name="minutes">min</string>
+    <string name="seconds">sec</string>
     <string name="result">%1$dm%2$ds</string>
 </resources>
