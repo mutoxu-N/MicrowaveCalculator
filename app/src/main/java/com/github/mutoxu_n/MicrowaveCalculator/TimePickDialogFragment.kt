@@ -34,13 +34,19 @@ class TimePickDialogFragment(private var min: Int, private var sec: Int) : Botto
         npSec.maxValue = 11
         npSec.value = sec / 5
 
+        // set listener
+        npMin.setOnValueChangedListener(OnNumberPickerChanged())
+        npSec.setOnValueChangedListener(OnNumberPickerChanged())
+
         return v
     }
 
-    override fun onDestroy() {
-        val a = activity as MainActivity
-        val num = npMin.value*100 + npSec.value*5
-        a.findViewById<EditText>(R.id.etBeforeTime).setText(num.toString())
-        super.onDestroy()
+    private inner class OnNumberPickerChanged: NumberPicker.OnValueChangeListener{
+        override fun onValueChange(picker: NumberPicker?, oldVal: Int, newVal: Int) {
+            val num = npMin.value*100 + npSec.value*5
+            (activity as MainActivity).findViewById<EditText>(R.id.etBeforeTime)
+                .setText(num.toString())
+        }
+
     }
 }
