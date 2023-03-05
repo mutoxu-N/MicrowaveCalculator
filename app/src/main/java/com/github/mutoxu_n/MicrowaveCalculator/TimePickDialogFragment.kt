@@ -32,7 +32,7 @@ class TimePickDialogFragment(private var min: Int, private var sec: Int) : Botto
         npSec.displayedValues = (0..11).map { (it*5).toString() }.toTypedArray()
         npSec.minValue = 0
         npSec.maxValue = 11
-        npSec.value = sec
+        npSec.value = sec / 5
 
         return v
     }
