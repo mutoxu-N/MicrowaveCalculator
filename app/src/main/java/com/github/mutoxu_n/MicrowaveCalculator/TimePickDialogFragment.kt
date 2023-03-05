@@ -27,10 +27,11 @@ class TimePickDialogFragment(private var min: Int, private var sec: Int) : Botto
         npMin.maxValue = 60
         npMin.value = min
 
-        // sec number picker
+        // sec number picker, multiple of 5
         npSec = v.findViewById(R.id.npSec)
+        npSec.displayedValues = (0..11).map { (it*5).toString() }.toTypedArray()
         npSec.minValue = 0
-        npSec.maxValue = 59
+        npSec.maxValue = 11
         npSec.value = sec
 
         return v
@@ -38,7 +39,7 @@ class TimePickDialogFragment(private var min: Int, private var sec: Int) : Botto
 
     override fun onDestroy() {
         val a = activity as MainActivity
-        val num = npMin.value*100 + npSec.value
+        val num = npMin.value*100 + npSec.value*5
         a.findViewById<EditText>(R.id.etBeforeTime).setText(num.toString())
         super.onDestroy()
     }
