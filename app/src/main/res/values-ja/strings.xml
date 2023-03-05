@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">レンチン計算</string>
+    <string name="app_name">レンジ計算</string>
     <string name="tvBefore">レシピの情報</string>
-    <string name="tvAfter">使う電子レンジ</string>
+    <string name="tvAfter">レンジのワット数</string>
     <string name="select">選択</string>
     <string name="setPreset">プリセット%1$dを%2$dWに設定しました。</string>
     <string name="minutes">分</string>
