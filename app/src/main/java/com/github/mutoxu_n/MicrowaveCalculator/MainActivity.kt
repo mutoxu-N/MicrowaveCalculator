@@ -44,6 +44,12 @@ class MainActivity : AppCompatActivity() {
         findViewById<EditText>(R.id.etBeforeWatt).addTextChangedListener(OnWattChanged())
         findViewById<EditText>(R.id.etAfterWatt).addTextChangedListener(OnWattChanged())
 
+        // when etAfterWatt clicked
+        findViewById<EditText>(R.id.etAfterWatt).setOnClickListener {
+            Toast.makeText(
+                this@MainActivity, getString(R.string.presetHint), Toast.LENGTH_LONG).show()
+        }
+
 
         updateDisplay()
     }
