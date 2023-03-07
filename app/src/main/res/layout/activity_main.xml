@@ -79,6 +79,7 @@
                 android:paddingVertical="0dp"
                 android:layout_margin="3dp"
                 android:text="@string/watt500"
+                android:textColor="@color/white"
                 android:textSize="25sp"/>
 
             <Button
@@ -93,6 +94,7 @@
                 android:paddingVertical="0dp"
                 android:layout_margin="3dp"
                 android:text="@string/watt600"
+                android:textColor="@color/white"
                 android:textSize="25sp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -137,6 +139,7 @@
                 android:minWidth="0dp"
                 android:paddingVertical="0dp"
                 android:text="@string/select"
+                android:textColor="@color/white"
                 android:textSize="25sp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
@@ -211,6 +214,7 @@
                 android:minHeight="0dp"
                 android:paddingVertical="0dp"
                 android:text="@string/watt500"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toStartOf="@+id/btPreset2"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -225,6 +229,7 @@
                 android:minHeight="0dp"
                 android:paddingVertical="0dp"
                 android:text="@string/watt500"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/btPreset1"
                 app:layout_constraintEnd_toStartOf="@+id/btPreset3"
@@ -239,6 +244,7 @@
                 android:minHeight="0dp"
                 android:paddingVertical="0dp"
                 android:text="@string/watt500"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/btPreset2"
                 app:layout_constraintEnd_toEndOf="parent"
