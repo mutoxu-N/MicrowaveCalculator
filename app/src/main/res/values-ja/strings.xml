@@ -8,4 +8,5 @@
     <string name="minutes">分</string>
     <string name="seconds">秒</string>
     <string name="result">%1$d分%2$d秒</string>
+    <string name="presetHint">ワット数のボタンを長押しするとプリセットを設定できます。</string>
 </resources>

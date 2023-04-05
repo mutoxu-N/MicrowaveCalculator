@@ -11,4 +11,5 @@
     <string name="minutes">min</string>
     <string name="seconds">sec</string>
     <string name="result">%1$dm%2$ds</string>
+    <string name="presetHint">You can preset wattage when tap the button for long time.</string>
 </resources>
