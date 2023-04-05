@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MicrowaveCalculator"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7017970835872741~7915333591"/>
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
@@ -24,4 +27,6 @@
         </activity>
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 </manifest>

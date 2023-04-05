@@ -10,6 +10,9 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity() {
@@ -44,6 +47,11 @@ class MainActivity : AppCompatActivity() {
         findViewById<EditText>(R.id.etBeforeWatt).addTextChangedListener(OnWattChanged())
         findViewById<EditText>(R.id.etAfterWatt).addTextChangedListener(OnWattChanged())
 
+        // create ad
+        MobileAds.initialize(this@MainActivity)
+        val adView = findViewById<AdView>(R.id.adView)
+        val adReq = AdRequest.Builder().build()
+        adView.loadAd(adReq)
 
         updateDisplay()
     }
