@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -59,14 +60,22 @@ class MainActivity : AppCompatActivity() {
         val adReq = AdRequest.Builder().build()
         adView.loadAd(adReq)
 
-
         updateDisplay()
     }
 
     fun updateDisplay() {
+        val etBeforeWatt = findViewById<EditText>(R.id.etBeforeWatt)
+        val etAfterWatt = findViewById<EditText>(R.id.etAfterWatt)
+
         // get data
-        val beforeWatt: Int? = findViewById<EditText>(R.id.etBeforeWatt).text.toString().toIntOrNull()
-        val afterWatt: Int? = findViewById<EditText>(R.id.etAfterWatt).text.toString().toIntOrNull()
+        val originalBeforeWatt = etBeforeWatt.text.toString()
+        val beforeWatt: Int? = originalBeforeWatt
+            .replace(",", "").replace(".", "")
+            .replace(" ", "").replace("-", "").toIntOrNull()
+        val originalAfterWatt = etAfterWatt.text.toString()
+        val afterWatt: Int? = originalAfterWatt
+            .replace(",", "").replace(".", "")
+            .replace(" ", "").replace("-", "").toIntOrNull()
         val beforeTime: String = findViewById<EditText>(R.id.etBeforeTime).text.toString()
         val arr = beforeTime.split(':').reversed()
 
@@ -76,6 +85,17 @@ class MainActivity : AppCompatActivity() {
         afterWatt?.let { editor.putInt("afterWatt", it) }
         editor.putString("beforeTime", beforeTime)
         editor.apply()
+
+        // invalid chars
+        beforeWatt?.let {if(originalBeforeWatt != it.toString()) {
+            etBeforeWatt.setText(it.toString())
+            etBeforeWatt.setSelection(it.toString().length)
+        }}
+
+        afterWatt?.let { if(originalAfterWatt != it.toString()) {
+            etAfterWatt.setText(it.toString())
+            etAfterWatt.setSelection(it.toString().length)
+        }}
 
         // null skip
         beforeWatt ?: return
@@ -161,7 +181,9 @@ class MainActivity : AppCompatActivity() {
         override fun afterTextChanged(s: Editable?) {
             // check == false if we wanna skip format check
             val originalText = s.toString()
-            var num: Int? = originalText.replace(":", "").toIntOrNull()
+            var num: Int? = originalText.replace(":", "")
+                .replace(",", "").replace(".", "")
+                .replace(" ", "").replace("-", "").toIntOrNull()
             if(num == null) num = 0
 
             // calc time
