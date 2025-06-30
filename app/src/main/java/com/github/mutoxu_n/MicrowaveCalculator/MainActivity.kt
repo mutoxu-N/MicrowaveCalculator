@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
             .replace(",", "").replace(".", "")
             .replace(" ", "").replace("-", "").toIntOrNull()
         val beforeTime: String = findViewById<EditText>(R.id.etBeforeTime).text.toString()
-        val arr = beforeTime.split(':').reversed()
+        val arr = beforeTime.split(':').asReversed()
 
         // save data
         val editor = getPreferences(Context.MODE_PRIVATE).edit()
