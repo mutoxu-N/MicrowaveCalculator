@@ -12,4 +12,7 @@
     <string name="seconds">sec</string>
     <string name="result">%1$dm%2$ds</string>
     <string name="presetHint">You can preset wattage when tap the button for long time.</string>
+    <string name="tip_register_watt">Long-press a button to save the current wattage as its preset.</string>
+    <string name="button_help">How to configure buttons?</string>
+    <string name="button_close">Close</string>
 </resources>

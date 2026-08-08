@@ -254,6 +254,9 @@
                 app:layout_constraintStart_toEndOf="@+id/btPreset2" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
     </LinearLayout>
 
     <TextView
@@ -270,6 +273,18 @@
         android:textColor="?attr/colorPrimaryInverse"
         android:textSize="40sp" />
 
+    <Button
+        android:id="@+id/btHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/adView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:text="@string/button_help"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/ic_help" />
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"

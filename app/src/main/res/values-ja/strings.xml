@@ -9,4 +9,7 @@
     <string name="seconds">秒</string>
     <string name="result">%1$d分%2$d秒</string>
     <string name="presetHint">ワット数のボタンを長押しするとプリセットを設定できます。</string>
+    <string name="tip_register_watt">ボタンを長押しすると､現在のワット数をボタンに登録できます</string>
+    <string name="button_help">ボタンの設定方法</string>
+    <string name="button_close">閉じる</string>
 </resources>

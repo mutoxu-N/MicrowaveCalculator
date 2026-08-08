@@ -4,12 +4,12 @@ import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
@@ -53,6 +53,16 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(
                 this@MainActivity, getString(R.string.presetHint), Toast.LENGTH_LONG).show()
         }
+
+        // when btHelp clicked
+        findViewById<Button>(R.id.btHelp).setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle(R.string.button_help)
+                .setMessage(R.string.tip_register_watt)
+                .setPositiveButton(R.string.button_close) { _, _ -> }
+                .show()
+        }
+
 
         // create ad
         MobileAds.initialize(this@MainActivity)
